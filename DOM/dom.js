@@ -17,38 +17,38 @@
 
 
 // GetElementById
-console.log(document.getElementById('header-title'));
-let headerTitle = document.getElementById('header-title');
-let header = document.getElementById('main-header');
+// console.log(document.getElementById('header-title'));
+// let headerTitle = document.getElementById('header-title');
+// let header = document.getElementById('main-header');
 // console.log(headerTitle);
 // // headerTitle.textContent = 'Hello';
 // // headerTitle.innerText = 'Goodbye';
 // console.log(headerTitle.innerText);
 // headerTitle.innerHTML = '<h3>Hello</h3>';
-header.style.borderBottom = 'solid 3px #000';
+// header.style.borderBottom = 'solid 3px #000';
 
 // GETELEMENTSBYCLASSNAME
-let items = document.getElementsByClassName('list-group-item');
-console.log(items);
-console.log(items[1]);
-// items[1].textContent = 'Hello 2';
-items[1].style.fontWeight = 'bold';
-items[1].style.backgroundColor = 'Yellow';
+// let items = document.getElementsByClassName('list-group-item');
+// console.log(items);
+// console.log(items[1]);
+// // items[1].textContent = 'Hello 2';
+// items[1].style.fontWeight = 'bold';
+// items[1].style.backgroundColor = 'Yellow';
 
-items.style.backgroundColor = '';
+// items.style.backgroundColor = '';
 
-for(let i = 0; i < items.length; i++){
-    items[i].style.backgroundColor = '#f4f4f4';
-}
+// for(let i = 0; i < items.length; i++){
+//     items[i].style.backgroundColor = '#f4f4f4';
+// }
 
 // GETELEMENTSBYTAGNAME
 
-let li = document.getElementsByTagName('li');
-console.log(li);
-console.log(li[1]);
-// li[1].textContent = 'Hello 2';
-li[1].style.fontWeight = 'bold';
-li[1].style.backgroundColor = 'yellow';
+// let li = document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// // li[1].textContent = 'Hello 2';
+// li[1].style.fontWeight = 'bold';
+// li[1].style.backgroundColor = 'yellow';
 
 
 // let li = document.getElementsByTagName('li');
@@ -59,9 +59,9 @@ li[1].style.backgroundColor = 'yellow';
 // li[1].style.backgroundColor = 'yellow';
 
 
-for(let i = 0; i < li.length; i++){
-    li[i].style.backgroundColor = '#f4f4f4';
-}
+// for(let i = 0; i < li.length; i++){
+//     li[i].style.backgroundColor = '#f4f4f4';
+// }
 
 // QUERYSELECTOR
 
@@ -96,3 +96,15 @@ for(let i = 0; i < li.length; i++){
 //     odd[i].style.backgroundColor = '#f4f4f4';
 //     even[i].style.backgroundColor = '#ccc';
 // }
+
+// TRAVERSING THE DOM
+let itemList = document.querySelector('#items');
+// parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+// parentElement
+console.log(itemList.parentElement);
+itemList.parentElement.style.backgroundColor = '#f4f4f4';
+console.log(itemList.parentElement.parentElement.parentElement);
