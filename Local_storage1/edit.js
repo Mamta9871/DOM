@@ -1,4 +1,3 @@
-
 function addCustomerToLocalStorage(customer) {
     let customers = JSON.parse(localStorage.getItem('customers')) || [];
     customers.push(customer);
