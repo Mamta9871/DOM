@@ -1,5 +1,4 @@
 
-// Function to add a customer to local storage and display it
 function addCustomerToLocalStorage(customer) {
     let customers = JSON.parse(localStorage.getItem('customers')) || [];
     customers.push(customer);
@@ -7,7 +6,6 @@ function addCustomerToLocalStorage(customer) {
     displayCustomers();
 }
 
-// Function to display customers from local storage
 function displayCustomers() {
     const customerList = document.getElementById('customerList');
     customerList.innerHTML = '';
@@ -17,12 +15,10 @@ function displayCustomers() {
         const customerItem = document.createElement('li');
         customerItem.textContent = `Name: ${customer.name}, Email: ${customer.email}, Contact: ${customer.contact}`;
 
-        // Add an edit button to each customer entry
         const editButton = document.createElement('button');
         editButton.textContent = 'Edit';
         editButton.addEventListener('click', () => editCustomer(index));
 
-        // Add a delete button to each customer entry
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.addEventListener('click', () => deleteCustomer(index));
@@ -33,7 +29,6 @@ function displayCustomers() {
     });
 }
 
-// Function to delete a customer by index
 function deleteCustomer(index) {
     const customers = JSON.parse(localStorage.getItem('customers')) || [];
     customers.splice(index, 1);
@@ -41,12 +36,10 @@ function deleteCustomer(index) {
     displayCustomers();
 }
 
-// Function to edit a customer by index
 function editCustomer(index) {
     const customers = JSON.parse(localStorage.getItem('customers')) || [];
     const customer = customers[index];
 
-    // Prompt the user to edit customer details
     const updatedCustomer = prompt('Edit Customer Details', JSON.stringify(customer));
     if (updatedCustomer !== null) {
         try {
@@ -60,7 +53,6 @@ function editCustomer(index) {
     }
 }
 
-// Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
     displayCustomers();
 
@@ -85,6 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const deleteButton = document.getElementById('deleteButton');
 
     deleteButton.addEventListener('click', () => {
-        // Implement logic to delete selected customers here, if needed
     });
 });
